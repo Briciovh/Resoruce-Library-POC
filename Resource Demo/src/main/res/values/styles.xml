@@ -1,0 +1,21 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="TitleStyle">
+        <item name="android:textColor">@color/my_red_color</item>
+        <item name="android:textSize">@dimen/big_text</item>
+        <item name="fontFamily">@font/black_bones</item>
+    </style>
+
+    <style name="HeaderStyle">
+        <item name="android:textColor">@color/my_blue_color</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="ParagraphStyle">
+        <item name="android:textColor">@color/my_blue_color</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="fontFamily">@font/waltograph</item>
+    </style>
+
+</resources>
