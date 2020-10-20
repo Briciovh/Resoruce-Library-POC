@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Resource_Library_POC.iml" filepath="$PROJECT_DIR$/.idea/modules/Resource_Library_POC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Resource_Library_POC.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Resource_Library_POC.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Resource Demo/Resource_Library_POC.resource_library.iml" filepath="$PROJECT_DIR$/.idea/modules/Resource Demo/Resource_Library_POC.resource_library.iml" />
+    </modules>
+  </component>
+</project>
