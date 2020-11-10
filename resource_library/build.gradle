@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 29
@@ -9,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -20,6 +21,33 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier "sources"
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                //from android.sourceSets.main.java.resourcedemo
+                from components.release
+
+                groupId = 'com.example.resourcedemo'
+                artifactId = 'resource'
+                artifact("$buildDir/outputs/aar/resoruce_library-release.aar")
+                version = '1.2'
+            }
+            debug(MavenPublication) {
+                from components.debug
+                groupId = 'com.example.resourcedemo'
+                artifactId = 'resource-debug'
+                version = '1.1'
+            }
         }
     }
 }
